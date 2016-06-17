@@ -1,8 +1,0 @@
-name = MFCR Schema
-description = Provides Schema mapping for Ministry of Finance of the Czech Republic for Open Data Schema Mapper module for the Czech national open data catalogue.
-core = 7.x
-package = Open Data
-version = 7.x-1.x
-dependencies[] = features
-dependencies[] = open_data_schema_map
-dependencies[] = pathauto

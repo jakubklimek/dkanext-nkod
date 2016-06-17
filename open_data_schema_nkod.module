@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * @file
+ * Provides Schema mapping for National open data catalog of the Czech Republic.
+ */
+
+/**
+ * Implements hook_open_data_schema_map_endpoints_alter().
+ */
+function open_data_schema_nkod_open_data_schema_map_endpoints_alter(&$records) {
+  $records[] = 'nkod_site_read';
+}
+
+/**
+ * Implements hook_open_data_schema_map_load().
+ */
+function open_data_schema_nkod_open_data_schema_map_load($machine_name) {
+  if ($machine_name == 'nkod_site_read') {
+    $record = new stdClass();
+    $record->name = 'NKOD Site Read';
+    $record->enabled = TRUE;
+    $record->api_schema = 'nkod_no_schema';
+    $record->entity = '';
+    $record->bundle = '';
+    $record->arguments = array();
+    $record->machine_name = 'nkod_site_read';
+    $record->endpoint = 'api/3/action/site_read';
+    $record->callback = 'open_data_schema_nkod_site_read_callback';
+    return $record;
+  }
+}
+
+/**
+ * Site read callback.
+ */
+function open_data_schema_nkod_site_read_callback() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_open_data_schema().
+ */
+function open_data_schema_nkod_open_data_schema() {
+  $schemas_path = DRUPAL_ROOT . '/' . drupal_get_path('module', 'open_data_schema_nkod') . '/data/';
+  return array(
+    array(
+      'short_name' => 'nkod_dataset',
+      'title' => 'NKOD Dataset',
+      'schema_file' => $schemas_path . 'nkod_dataset_schema.json',
+      'description' => t('Schéma datové sady pro NKOD.'),
+    )
+  );
+}
+
+/**
+ * Implements hook_open_data_schema_map_results_alter().
+ */
+function open_data_schema_nkod_open_data_schema_map_results_alter(&$result, $machine_name, $api_schema) {
+  $nkod_schemas = array(
+    'nkod_dataset',
+    'nkod_no_schema',
+  );
+  if (in_array($api_schema, $nkod_schemas)) {
+  
+    /* 
+    * In case of nkod_dataset, ODSM returns an array of results meeting the criteria,
+    * therefore when accessing package_show, we get array with one item instead of
+    * just the item itself. This solves the problem.
+    */          
+    if(is_array($result) && count($result) === 1 && isset($result[0])) $result = $result[0];
+    
+    // CKAN expects results wrapped in help, success, result.
+    $response = array(
+      'help' => '',
+      'success' => TRUE,
+      'result' => $result,
+    );
+    
+    /*
+    * If there is an error we return it
+    */         
+    if (isset($result['error'])) {
+      $response['success'] = FALSE;
+      $response['error'] = $result['error'];
+      unset($response['result']);
+    }
+    
+    /*
+    * Since this hook insn't wrapped in the try catch stament
+    * we need to manage not found error by hand
+    */
+    if (!isset($result['error']) && $response['result'] === NULL) {
+      $error = array(
+        '__type' => 'Not Found Error',
+        'message' => 'Not Found',
+      );
+      $response['error'] = $error;
+      unset($response['result']);
+      drupal_add_http_header('Status', '404 Not Found');
+    }
+    $result = $response;
+  }
+}
+   
+?>

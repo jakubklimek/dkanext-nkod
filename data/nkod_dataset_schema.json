@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://project-open-data.github.io/schema/1_0_final/single_entry.json#",
-  "title": "MFCR Dataset Schema",
-  "description": "Metadata schéma pro katalogy otevřených dat ČR.",
+  "title": "NKOD Dataset Schema",
+  "description": "Metadatové schéma pro Národní katalog otevřených dat ČR.",
   "type": "object",
   "properties": {
     "id": {
@@ -10,80 +10,60 @@
       "type": "string"
     },
     "name": {
-      "title": "Název",
+      "title": "ID datové sady",
       "type": "string"
     },
     "title": {
-      "title": "Titulek",
-      "type": "string"
-    },
-    "publisher_name": {
-      "title": "Poskytovatel dat",
-      "type": "string"
-    },
-    "publisher_uri": {
-      "title": "Poskytovatel dat URL",
-      "type": "string"
-    },
-    "maintainer": {
-      "title": "Správce",
-      "type": "string"
-    },
-    "maintainer_email": {
-      "title": "Správce Email",
-      "type": "string"
-    },
-    "ruian_code": {
-      "title": "RUIAN kód",
-      "type": "string"
-    },
-    "ruian_type": {
-      "title": "RUIAN typ",
-      "type": "string"
-    },
-    "temporal_start": {
-      "title": "Časová platnost od",
-      "type": "string"
-    },
-    "temporal_end": {
-      "title": "Časová platnost do",
-      "type": "string"
-    },
-    "frequency": {
-      "title": "Periodicita publikace - kód",
-      "type": "string"
-    },
-    "license_title": {
-      "title": "Licence - popis",
-      "description": "",
-      "type": "string"
-    },
-    "license_link": {
-      "title": "Licence - URL",
-      "description": "",
+      "title": "Název datové sady",
       "type": "string"
     },
     "notes": {
-      "title": "Popis",
-      "description": "",
+      "title": "Popis datové sady",
       "type": "string"
     },
-    "url": {
-      "title": "URL",
+    "frequency": {
+      "title": "Periodicita aktualizace - kód",
       "type": "string"
     },
-    "state": {
-      "title": "Stav",
-      "type": "string",
-      "enum": ["uncomplete", "complete", "active"]
-    },
-    "log_message": {
-      "title": "Log Message",
+    "ruian_type": {
+      "title": "Související geografické území - typ prvku RUIAN",
       "type": "string"
     },
-    "private": {
-      "title": "Private",
-      "type": "boolean"
+    "ruian_code": {
+      "title": "Související geografické území - kód prvku RUIAN",
+      "type": "string"
+    },
+    "theme": {
+      "title": "Klasifikace dle EuroVoc",
+      "type": "string"
+    },
+    "maintainer": {
+      "title": "Jméno kurátora dat",
+      "type": "string"
+    },
+    "maintainer_email": {
+      "title": "Email kurátora dat",
+      "type": "string"
+    },
+    "schema": {
+      "title": "Odkaz na dokumentaci datové sady",
+      "type": "string"
+    },
+    "temporal_start": {
+      "title": "Dotčené časové období od",
+      "type": "string"
+    },
+    "temporal_end": {
+      "title": "Dotčené časové období do",
+      "type": "string"
+    },
+    "publisher_uri": {
+      "title": "URL poskytovatele dat",
+      "type": "string"
+    },
+    "publisher_name": {
+      "title": "Název poskytovatele dat",
+      "type": "string"
     },
     "metadata_created": {
       "title": "Vytvořeno",
@@ -112,55 +92,35 @@
                 "type": "string"
               },
               "url": {
-                "title": "URL",
+                "title": "Odkaz na stažení datového zdroje",
                 "type": "string"
               },
-              "description": {
-                "title": "Popis",
+              "license_link": {
+                "title": "Odkaz na podmínky užití",
                 "type": "string"
               },
               "format": {
-                "title": "Formát",
-                "type": "string"
-              },
-              "mimetype": {
                 "title": "MIME typ",
                 "type": "string"
               },
-              "state": {
-                "title": "state",
-                "type": "string"
-              },
               "name": {
-                "title": "Název",
+                "title": "Název datového zdroje",
                 "type": "string"
               },
-              "size": {
-                "title": "Velikost",
+              "described_by": {
+                "title": "Odkaz na strojově čitelné schéma datového zdroje",
                 "type": "string"
               },
-              "created": {
-                "title": "Vytvořeno",
-                "type": "string"
-              },
-              "last_modified": {
-                "title": "Poslední úprava",
-                "type": "string"
-              },
-              "ruian_code": {
-                "title": "RUIAN kód",
-                "type": "string"
-              },
-              "ruian_type": {
-                "title": "RUIAN typ",
+              "described_by_type": {
+                "title": "Formát schématu datového zdroje (MIME typ)",
                 "type": "string"
               },
               "temporal_start": {
-                "title": "Časová platnost od",
+                "title": "Dotčené časové období od",
                 "type": "string"
               },
               "temporal_end": {
-                "title": "Časová platnost do",
+                "title": "Dotčené časové období do",
                 "type": "string"
               }
             }
@@ -174,7 +134,7 @@
       ]
     },
     "tags": {
-      "title":"Tagy",
+      "title":"Klíčová slova",
       "description":"",
       "anyOf": [
         {
