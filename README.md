@@ -1,11 +1,11 @@
-# open_data_schema_map_nkod
-Pod-modul Drupalového modulu [open_data_schema_map](https://github.com/NuCivic/open_data_schema_map) popisující schéma, které je kompatibilní s [Národním katalogem otevřených dat (NKOD)](https://portal.gov.cz/portal/rejstriky/data/97898/).
+# Rozšíření DKAN pro kompatibilitu s NKOD
+Tento Drupal modul je rozšířením pro katalog [DKAN](https://github.com/nucivic/dkan-drops-7) zajišťující kompatibilitu [API lokálního katalogu](http://opendata.gov.cz/nastroj:ckan-api) pro harvestování do [Národního katalogu otevřených dat (NKOD)](http://data.gov.cz).
 
 ## Instalace
-1. V Structure -> Content types -> Dataset -> Manage fields je třeba přidat chybějící (případně upravit stávající) pole pro datovou sadu dle [požadavků NKOD](http://opendata.gov.cz/nastroj:ckan-api), případně odebrat nepotřebná a upravit pořadí
-2. V Structure -> Content types -> Resource -> Manage fields je třeba přidat chybějící (případně upravit stávající) pole pro datový zdroj dle [požadavků NKOD](http://opendata.gov.cz/nastroj:ckan-api), případně odebrat nepotřebná a upravit pořadí
-3. Modul nakopírujeme do adresáře `modules`
-4. V menu 'Modules' zapneme `NKOD Schema`
-5. Přejít do Nastavení (Configuration) -> Webové služby (Web services) -> Open Data Schema Mapper 
-6. Vypnout CKAN Package Show API (edit, odškrtnout `Enabled`)
-7. Upravit NKOD package_show a k zobrazeným položkám ze schématu přiřadit pole z bodu 1. a 2.
+1. Nakopírujte soubory modulu do DKAN (Drupal 7) instalace, např. `/var/www/sites/all/modules/dkanext-nkod'
+2. V menu 'Modules' zapněte `NKOD extension`
+
+## Poznámky
+- Úspěšnou instalaci ověříte tím, že na obrazovce pro přidání datasetu jsou položky [vyžadované NKOD](http://opendata.gov.cz/nastroj:ckan-api)
+- Také ověřte, že po kliknutí na "JSON" vidíte JSON soubor odpovdající [požadavkům NKOD](http://opendata.gov.cz/nastroj:ckan-api)
+- Pokud API nefunguje, zkuste vypnout původní CKAN package_show API v Nastavení (Configuration) -> Webové služby (Web services) -> Open Data Schema Mapper a ověřte, že je zde zapnuto NKOD package_show API
