@@ -2,7 +2,7 @@
 Tento Drupal modul je rozšířením pro katalog [DKAN](https://github.com/nucivic/dkan-drops-7) zajišťující kompatibilitu [API lokálního katalogu](http://opendata.gov.cz/nastroj:ckan-api) pro harvestování do [Národního katalogu otevřených dat (NKOD)](http://data.gov.cz).
 
 ## Instalace
-1. Nakopírujte soubory modulu do DKAN (Drupal 7) instalace, např. `/var/www/sites/all/modules/dkanext-nkod'
+1. Nakopírujte soubory modulu do DKAN (Drupal 7) instalace, např. `/var/www/sites/all/modules/dkanext-nkod`
 2. V menu 'Modules' zapněte `NKOD extension`
 
 ## Poznámky
