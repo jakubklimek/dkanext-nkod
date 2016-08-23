@@ -110,7 +110,7 @@ function nkod_extension_open_data_schema_apis_defaults() {
           'type' => '',
         ),
         'format' => array(
-          'value' => '[node:field-resources:Nth:field_field_format]',
+          'value' => '[node:field-resources:Nth:field_mimetype]',
           'type' => '',
         ),
         'name' => array(

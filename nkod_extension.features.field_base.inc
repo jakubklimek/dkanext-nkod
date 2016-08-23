@@ -52,13 +52,13 @@ function nkod_extension_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_field_format'.
-  $field_bases['field_field_format'] = array(
+  // Exported field_base: 'field_mimetype'.
+  $field_bases['field_mimetype'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_field_format',
+    'field_name' => 'field_mimetype',
     'indexes' => array(
       'format' => array(
         0 => 'format',

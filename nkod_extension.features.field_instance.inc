@@ -49,7 +49,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 24,
@@ -95,7 +95,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 15,
@@ -141,7 +141,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 13,
@@ -187,7 +187,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 17,
@@ -233,7 +233,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 16,
@@ -331,7 +331,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 4,
@@ -377,7 +377,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 10,
@@ -423,7 +423,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 12,
@@ -469,7 +469,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 11,
@@ -515,7 +515,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 9,
@@ -561,7 +561,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 11,
@@ -607,15 +607,15 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 12,
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_field_format'.
-  $field_instances['node-resource-field_field_format'] = array(
+  // Exported field_instance: 'node-resource-field_mimetype'.
+  $field_instances['node-resource-field_mimetype'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
@@ -642,7 +642,7 @@ function nkod_extension_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_field_format',
+    'field_name' => 'field_mimetype',
     'label' => 'Formát datového zdroje (MIME typ)',
     'required' => 1,
     'settings' => array(
@@ -653,7 +653,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 3,
@@ -699,7 +699,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 4,
@@ -745,7 +745,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 14,
@@ -791,7 +791,7 @@ function nkod_extension_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 13,
