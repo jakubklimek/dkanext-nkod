@@ -106,22 +106,22 @@ function dkan_nkod_open_data_schema_apis_defaults() {
           'type' => '',
         ),
         'license_link' => array(
-          'value' => '[node:field-resources:Nth:field_licence]',
+          'value' => '[node:field-resources:Nth:field-license]',
           'type' => '',
         ),
         'format' => array(
-          'value' => '[node:field-resources:Nth:field_mimetype]',
+          'value' => '[node:field-resources:Nth:field-mimetype]',
           'type' => '',
         ),
         'name' => array(
           'value' => '[node:field-resources:Nth:title]',
           'type' => '',
         ),
-        'describedBy' => array(
+        'described_by' => array(
           'value' => '[node:field-resources:Nth:field-described-by]',
           'type' => '',
         ),
-        'describedByType' => array(
+        'described_by_type' => array(
           'value' => '[node:field-resources:Nth:field-described-by-type]',
           'type' => '',
         ),
