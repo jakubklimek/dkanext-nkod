@@ -4,7 +4,6 @@ core = 7.x
 package = Features
 version = 7.x-1.2
 dependencies[] = dkan_dataset_content_types
-dependencies[] = dkan_nkod
 dependencies[] = features
 dependencies[] = number
 dependencies[] = open_data_schema_map
