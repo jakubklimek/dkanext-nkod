@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * nkod_extension.features.field_base.inc
+ * dkan_nkod.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function nkod_extension_field_default_field_bases() {
+function dkan_nkod_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_described_by'.

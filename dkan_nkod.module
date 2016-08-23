@@ -4,19 +4,19 @@
  * Code for the NKOD extension feature.
  */
 
-include_once 'nkod_extension.features.inc';
+include_once 'dkan_nkod.features.inc';
 
 /**
  * Implements hook_open_data_schema_map_endpoints_alter().
  */
-function nkod_extension_open_data_schema_map_endpoints_alter(&$records) {
+function dkan_nkod_open_data_schema_map_endpoints_alter(&$records) {
   $records[] = 'nkod_site_read';
 }
 
 /**
  * Implements hook_open_data_schema_map_load().
  */
-function nkod_extension_open_data_schema_map_load($machine_name) {
+function dkan_nkod_open_data_schema_map_load($machine_name) {
   if ($machine_name == 'nkod_site_read') {
     $record = new stdClass();
     $record->name = 'NKOD Site Read';
@@ -27,7 +27,7 @@ function nkod_extension_open_data_schema_map_load($machine_name) {
     $record->arguments = array();
     $record->machine_name = 'nkod_site_read';
     $record->endpoint = 'api/3/action/site_read';
-    $record->callback = 'nkod_extension_site_read_callback';
+    $record->callback = 'dkan_nkod_site_read_callback';
     return $record;
   }
 }
@@ -35,15 +35,15 @@ function nkod_extension_open_data_schema_map_load($machine_name) {
 /**
  * Site read callback.
  */
-function nkod_extension_site_read_callback() {
+function dkan_nkod_site_read_callback() {
   return TRUE;
 }
 
 /**
  * Implements hook_open_data_schema().
  */
-function nkod_extension_open_data_schema() {
-  $schemas_path = DRUPAL_ROOT . '/' . drupal_get_path('module', 'nkod_extension') . '/data/';
+function dkan_nkod_open_data_schema() {
+  $schemas_path = DRUPAL_ROOT . '/' . drupal_get_path('module', 'dkan_nkod') . '/data/';
   return array(
     array(
       'short_name' => 'nkod_dataset',
@@ -57,7 +57,7 @@ function nkod_extension_open_data_schema() {
 /**
  * Implements hook_open_data_schema_map_results_alter().
  */
-function nkod_extension_open_data_schema_map_results_alter(&$result, $machine_name, $api_schema) {
+function dkan_nkod_open_data_schema_map_results_alter(&$result, $machine_name, $api_schema) {
   $nkod_schemas = array(
     'nkod_dataset',
     'nkod_no_schema',

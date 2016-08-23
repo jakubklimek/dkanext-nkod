@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * nkod_extension.features.inc
+ * dkan_nkod.features.inc
  */
 
 /**
  * Implements hook_open_data_schema_apis_defaults().
  */
-function nkod_extension_open_data_schema_apis_defaults() {
+function dkan_nkod_open_data_schema_apis_defaults() {
   $open_data_schema_apis = array();
 
   // Exported Open Data API Map: NKOD package_show

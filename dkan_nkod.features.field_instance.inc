@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * nkod_extension.features.field_instance.inc
+ * dkan_nkod.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function nkod_extension_field_default_field_instances() {
+function dkan_nkod_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-dataset-field_frequency_ods'.
