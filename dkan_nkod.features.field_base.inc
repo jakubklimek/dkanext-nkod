@@ -73,13 +73,13 @@ function dkan_nkod_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_licence'.
-  $field_bases['field_licence'] = array(
+  // Exported field_base: 'field_license'.
+  $field_bases['field_license'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_licence',
+    'field_name' => 'field_license',
     'indexes' => array(
       'format' => array(
         0 => 'format',
