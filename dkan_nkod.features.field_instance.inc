@@ -614,8 +614,8 @@ function dkan_nkod_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_licence'.
-  $field_instances['node-resource-field_licence'] = array(
+  // Exported field_instance: 'node-resource-field_license'.
+  $field_instances['node-resource-field_license'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
@@ -642,7 +642,7 @@ function dkan_nkod_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_licence',
+    'field_name' => 'field_license',
     'label' => 'Odkaz na podmínky užití',
     'required' => 1,
     'settings' => array(
